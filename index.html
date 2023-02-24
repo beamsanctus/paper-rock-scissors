@@ -11,36 +11,79 @@
         href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,900;1,300;1,400;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="main.css">
-    <title>PAPER ROCK SCISSORS</title>
+    <title>ROCK PAPER SCISSORS</title>
 </head>
 
 <body>
-    <h1>PAPER ROCK SCISSORS</h1>
+    <div class="content">
+        <div class="rule">
+            <img src="images/rule.png" alt="" width="300px">
+            <ol>
+                <li>We'll play for five rounds to determine the winner.</li>
+                <li>The first player to reach three points is the winner.</li>
+                <li>To start each round, click on one of the three icons on the screen:
+                    <ul>
+                        <li>Rock (a closed fist)</li>
+                        <li>Paper (an open hand with fingers extended)</li>
+                        <li>Scissors (a fist with the index and middle fingers extended)</li>
+                    </ul>
 
-    <img src="images/rule.png" alt="" class="rule">
+                </li>
+                <li>The bot will randomly choose one of the three icons as well.</li>
+                <li>Rock beats scissors, scissors beats paper, and paper beats rock. If both players choose the same
+                    icon, it's a tie.</li>
+                <li>The winner of each round earns one point.</li>
+                <li>After five rounds, the player with the most points is the winner!</li>
+                <li>Ready to play? Let's go!</li>
+            </ol>
+        </div>
+        <div class="main">
+            <h1>ROCK PAPER SCISSORS</h1>
 
-    <div id="console">Welcome To PAPER ROCK SCISSORS GAMES !</div>
+            <table id="board">
+                <tr class="board-head">
+                    <td>Round</td>
+                    <td style="vertical-align: center;"><img src="images/player.png" alt="" width="40px">Player</td>
+                    <td style="vertical-align: center;"><img src="images/bot.png" alt="" width="40px">Bot</td>
+                    <td>Result</td>
+                </tr>
 
-    <table class="board">
-        <tr>
-            <td>Round</td>
-            <td>Player</td>
-            <td>PC</td>
-        </tr>
+            </table>
+        </div>
+        <table class="score">
+            <tr>
+                <td class="right">PLAYER: </td>
+                <td><span id="player-score">0</span></td>
+            </tr>
+            <tr>
+                <td class="right">Bot: </td>
+                <td><span id="bot-score">0</span></td>
+            </tr>
+        </table>
+    </div>
 
-    </table>
+    <div id="popup">
+        <div class="popup-content">
+            <div id="#quote">Please select wisely.</div>
+            <div class="icons">
+                <img src="images/rock.png" alt="rock" class="img-icon" id="rock">
+                <img src="images/paper.png" alt="paper" class="img-icon" id="paper">
+                <img src="images/scissors.png" alt="scissors" class="img-icon" id="scissors">
+            </div>
+        </div>
+    </div>
 
-    <table class="score">
-        <tr>
-            <td class="right">PLAYER: </td>
-            <td>0</td>
-        </tr>
-        <tr>
-            <td class="right">PC: </td>
-            <td>0</td>
-        </tr>
-    </table>
+    <div id="trophy-popup">
+        <div class="trophy-content">
+            <div class="trophy-icons">
+                <img src="images/player.png" alt="player" id="player" class="thumbnail">
+                <img src="images/trophy.png" alt="trophy" id="trophy" class="thumbnail">
+                <img src="images/bot.png" alt="bot" id="bot" class="thumbnail">
+            </div>
+            <button class="primary-btn" id="play-btn">Play Again</button>
+        </div>
+    </div>
 </body>
-<script src="main.js"></script>
+<script type="text/javascript" src="main.js"></script>
 
 </html>
